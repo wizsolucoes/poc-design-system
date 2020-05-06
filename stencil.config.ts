@@ -15,5 +15,11 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null // disable service workers
     }
-  ]
+  ],
+  testing: {
+    transformIgnorePatterns: [ "<rootDir>/node_modules/(?!lit-element|lit-html|@lion)" ],
+    transform:  {
+      "^.+\\.(js|jsx)$": "ts-jest"
+    }
+  }
 };
